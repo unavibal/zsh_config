@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+alias n="nvim"
+alias lg="lazygit"
+alias ls="eza --color"
+alias ll="eza -la --color"
+alias llt="eza -la --sort=time"
+alias lst="eza --sort=time"
+alias cat="bat"
+alias cd="z"
+

@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+source "$HOME/.zshantigen/antigen.zsh"
+
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Highlight
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Completions
+antigen bundle zsh-users/zsh-completions
+
+# Autosuggestions
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen bundle agnoster
+
+antigen apply
+
+source "$(dirname "$0")/atuin"
+
+source <(fzf --zsh)
+
+eval "$(zoxide init zsh)"
+
+eval "$(starship init zsh)"
