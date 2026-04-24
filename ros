@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+alias rosglob="source /opt/ros/jazzy/setup.zsh"
+alias rosloc="source /opt/ros/jazzy/local_setup.zsh"
