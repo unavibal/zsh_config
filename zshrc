@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 
-path+=('/home/linuxbrew/.linuxbrew/bin')
+path+=("$(dirname $(command -v brew))")
 export PATH
 
 source "$(dirname "$0")/plugins"

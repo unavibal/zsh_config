@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+if [[ -f "$HOME/.zshrc" ]]; then
+  mv "$HOME/.zshrc" "$HOME/.zshrc.bkup"
+fi
+
+if [[ -f "$HOME/.zshenv" ]]; then
+  mv "$HOME/.zshenv" "$HOME/.zshenv.bkup"
+fi
+
+echo "#!/bin/zsh" >> "$HOME/.zshrc"
+echo "source $(dirname "$0")/.zshrc" > "$HOME/.zshrc"
+
+echo "#!/bin/zsh" >> "$HOME/.zshenv"
+echo "source $(dirname "$0")/.zshrc" > "$HOME/.zshenv"
+
+[ -f "$(dirname "$0")/apikeys.private" ] || touch "$(dirname "$0")/apikeys.private"
+
+
+mkdir -p "$HOME/.zshantigen"
+curl -L "git.io/antigen" > "$HOME/.zshantigen/antigen.zsh
