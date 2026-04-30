@@ -1,4 +1,5 @@
 #!/bin/zsh
 
 alias rosglob="source /opt/ros/jazzy/setup.zsh"
-alias rosloc="source /opt/ros/jazzy/local_setup.zsh"
+alias rosloc="source install/setup.zsh"
+alias rosclean="rm -rf log/ install/ build/"
