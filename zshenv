@@ -1,4 +1,11 @@
 #!/bin/zsh
+path+=("/opt/homebrew/bin")
+path+=("/usr/local/bin")
+path+=("/usr/bin") 
+path+=("$HOME/.local/bin")
+path+=("$HOME/.cargo/bin")
+export PATH
+
 export CC=clang
 export CXX=clang++
 export LDFLAGS="-fuse-ld=lld"

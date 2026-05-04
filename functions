@@ -1,0 +1,8 @@
+#!/bin/zsh
+sshmount() {
+    sshfs "$1": ~/sshf/"$1"
+}
+
+sshumount() {
+    umount ~/sshf/"$1"
+}

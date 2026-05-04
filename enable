@@ -8,11 +8,14 @@ if [[ -f "$HOME/.zshenv" ]]; then
   mv "$HOME/.zshenv" "$HOME/.zshenv.bkup"
 fi
 
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+relative_script_dir=${SCRIPT_DIR#$HOME/}
+
 echo "#!/bin/zsh" >> "$HOME/.zshrc"
-echo "source $(dirname "$0")/zshrc" > "$HOME/.zshrc"
+echo "source \$HOME/$relative_script_dir/zshrc" > "$HOME/.zshrc"
 
 echo "#!/bin/zsh" >> "$HOME/.zshenv"
-echo "source $(dirname "$0")/zshenv" > "$HOME/.zshenv"
+echo "source \$HOME/$relative_script_dir/zshenv" > "$HOME/.zshenv"
 
 [ -f "$(dirname "$0")/apikeys.private" ] || touch "$(dirname "$0")/apikeys.private"
 
