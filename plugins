@@ -25,6 +25,7 @@ antigen bundle agnoster
 antigen apply
 
 source "$(dirname "$0")/atuin"
+bindkey "ƒ" forward-word
 
 source <(fzf --zsh)
 
