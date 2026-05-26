@@ -19,6 +19,7 @@ antigen bundle zsh-users/zsh-completions
 
 # Autosuggestions
 antigen bundle zsh-users/zsh-autosuggestions
+bindkey 'ƒ' forward-word
 
 antigen bundle agnoster
 
@@ -32,3 +33,5 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 eval "$(starship init zsh)"
+
+eval $(thefuck --alias)

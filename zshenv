@@ -4,6 +4,8 @@ path+=("/usr/local/bin")
 path+=("/usr/bin") 
 path+=("$HOME/.local/bin")
 path+=("$HOME/.cargo/bin")
+path+=("$HOME/.atuin/bin")
+path+=("/home/linuxbrew/.linuxbrew/bin")
 export PATH
 
 export CC=clang
