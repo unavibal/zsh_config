@@ -11,3 +11,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 
 source "$(dirname "$0")/ros"
+
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
