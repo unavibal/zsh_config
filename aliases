@@ -7,5 +7,5 @@ alias ll="eza -la --color"
 alias llt="eza -la --sort=time"
 alias lst="eza --sort=time"
 alias cat="bat"
-alias cd="z"
+# alias cd="z"
 
